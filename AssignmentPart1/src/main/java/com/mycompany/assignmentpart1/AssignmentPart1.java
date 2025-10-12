@@ -20,6 +20,7 @@ public class AssignmentPart1 {
         Scanner scanner = new Scanner(System.in);
 
         boolean running = true;
+        
 
         // Let the user to choose to login or register or exit
         while (running) {
@@ -41,6 +42,11 @@ public class AssignmentPart1 {
                 case "login":
                     boolean loggedIn = loginSystem.loginUser();
                     System.out.println(loginSystem.returnLoginStatus(loggedIn));
+                    if (loggedIn){
+                        // Creating an instance of QuickChatMenu
+                        QuickChatMenu chatMenu = new QuickChatMenu();
+                        chatMenu.start();
+                    }
                     break;
                     
                 case "exit":
