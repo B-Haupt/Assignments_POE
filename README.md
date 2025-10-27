@@ -1,5 +1,37 @@
-Assignment Part 1 - Registration and Login Feature
+# Assignment Part 2: Sending & Storing Messages  
+**Course:** PROG5121 — Programming 1A  
+**Assignment 2 is on the branch Assignment 2 as per the instructions
 
+
+
+---
+
+## Overview
+
+In **Part 2**, I extend the earlier Registration/Login system to support sending **text messages**, computing a **hash** for each message, and persisting messages to disk in **JSON** format.
+
+---
+
+The application allows users to:
+- Create and validate messages
+- Check recipient phone numbers
+- Generate unique message IDs and hashes
+- Validate message length
+- Send, disregard, or store messages
+- Persist messages to JSON files
+- Run automated tests with JUnit 5
+
+
+
+
+
+
+
+---
+
+# Assignment Part 1 - Registration and Login Feature
+
+---
 
 The task for part 1 was to implement a simple user registration and login system. The task must have the following: 
 - Username, password and South African cell phone number validation
@@ -7,21 +39,6 @@ The task for part 1 was to implement a simple user registration and login system
 - Testing Unit implemented
 
 
-
-Project Structure 
-
-assignment-part1/
-├── src/
-│   ├── main/
-│   │   └── java/com/mycompany/assignmentpart1/
-│   │       ├── AssignmentPart1.java    # main console driver
-│   │       ├── Login.java              # validation & authentication logic
-│   │       ├── Registration.java       # interactive loops for registration prompts
-│   │       └── User.java               # simple user model
-│   └── test/
-│       └── java/com/mycompany/assignmentpart1/
-│           └── LoginTest.java          # JUnit test suite
-└── README.md
 
 
 Regex Attribution
