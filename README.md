@@ -1,6 +1,5 @@
 # Assignment Part 2: Sending & Storing Messages  
 **Course:** PROG5121 — Programming 1A  
-**Assignment 2 is on the branch Assignment 2 as per the instructions
 
 
 

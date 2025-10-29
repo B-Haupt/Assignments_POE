@@ -21,8 +21,9 @@ public class Message {
     private String messageContent;
     private String messageHash;
     private static int totalMessageSent = 0;
+    private String flag; // Flag to for message [Sent, Stored, Disregard]
     
-    // Normal constructor 
+    // 3 argument constructor for simple use
     public Message(int messageNumber, String recipient, String messageContent){
         this.messageId = generateMessageId();
         this.messageNumber = messageNumber;
@@ -31,14 +32,36 @@ public class Message {
         this.messageHash = createMessageHash();
     }
     
+    // Normal constructor - 4 arguments (flags included)
+    public Message(int messageNumber, String recipient, String messageContent, String flag){
+        this.messageId = generateMessageId();
+        this.messageNumber = messageNumber;
+        this.recipient = recipient;
+        this.messageContent = messageContent;
+        this.messageHash = createMessageHash();
+        this.flag = flag;
+    }
+    
     // Overloading the constructor for fixed id for unit testing
-    public Message(int messageNumber, String recipient, String messageContent, String forcedId){
+    public Message(int messageNumber, String recipient, String messageContent, String flag, String forcedId){
         this.messageId = forcedId;
         this.messageNumber = messageNumber;
         this.recipient = recipient;
         this.messageContent = messageContent;
         this.messageHash = createMessageHash();
+        this.flag = flag;
     }
+    
+    // Constructor for JSON loading
+    public Message(String id, int number, String recipient, String content,  String hash, String flag){
+        this.messageId = id;
+        this.messageNumber = number;
+        this.recipient = recipient;
+        this.messageContent = content;
+        this.messageHash = hash;
+        this.flag = flag;
+    }
+    
     
     // Random ten digit number for tracking messages
     private String generateMessageId(){
@@ -76,15 +99,10 @@ public class Message {
         switch (choice.toLowerCase()){
             case "send":
                 totalMessageSent++; // Increasing the message count
-                JOptionPane.showMessageDialog(null, "MessageId: " + messageId + "\n" +
-                "Message Hash: " + messageHash + "\n" +
-                "Recipient: " + recipient + "\n" +
-                "Message: " + messageContent);
                 return "Message successfully sent.";
             case "disregard":
-                return "Press 0 to delete message";
+                return "Message Disregarded.";
             case "store":
-                storeMessage();
                 return "Message successfully stored.";
             default: 
                 return "Invalid choice.";   
@@ -108,7 +126,7 @@ public class Message {
         return sentence;
     }
     
-    // Variable is private so have to creat a function to access it
+    // Variable is private so have to create a function to access it
     public static int returnTotalMessages(){
         return totalMessageSent;
     }
@@ -121,6 +139,7 @@ public class Message {
       obj.put("MessageHash", messageHash);
       obj.put("Recipient", recipient);
       obj.put("Message", messageContent);
+      obj.put("Flag", flag);
 
       try (FileWriter file = new FileWriter("messages.json", true)) {
           file.write(obj.toJSONString() + "\n");
@@ -129,4 +148,10 @@ public class Message {
       }
     }
     
+    // Setting up Getters
+    public String getMessageId() { return  messageId;}
+    public String getRecipient() { return recipient;}
+    public String getMessageContent() { return messageContent; }
+    public String getMessageHash() { return messageHash; }
+    public String getFlag() { return flag;}
 }

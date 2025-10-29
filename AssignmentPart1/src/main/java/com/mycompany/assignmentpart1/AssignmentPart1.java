@@ -40,11 +40,11 @@ public class AssignmentPart1 {
                     break;
 
                 case "login":
-                    boolean loggedIn = loginSystem.loginUser();
-                    System.out.println(loginSystem.returnLoginStatus(loggedIn));
-                    if (loggedIn){
+                    User loggedInUser = loginSystem.loginUser();
+                    System.out.println(loginSystem.returnLoginStatus(loggedInUser != null));
+                    if (loggedInUser != null){
                         // Creating an instance of QuickChatMenu
-                        QuickChatMenu chatMenu = new QuickChatMenu();
+                        QuickChatMenu chatMenu = new QuickChatMenu(loggedInUser);
                         chatMenu.start();
                     }
                     break;

@@ -65,7 +65,7 @@ public class Login {
         return register.registerUser();
     }
 
-    public boolean loginUser() {
+    public User loginUser() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("----USER LOGIN----");
 
@@ -78,12 +78,12 @@ public class Login {
         for (User currentUser : users) {
             if (currentUser.username.equals(usernameInput) && currentUser.password.equals(passwordInput)) {
                 messageForUser = "Welcome " + currentUser.firstName + " ," + currentUser.secondName + " it is great to see you again.";
-                return true; // stop the method immediately as login is successful;y
+                return currentUser; // stop the method immediately as login is successful;y
             }
         }
 
         messageForUser = LOGIN_ERROR;
-        return false; // incorrect details for login
+        return null; // incorrect details for login
     }
 
     public String returnLoginStatus(boolean status) {

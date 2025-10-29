@@ -25,4 +25,7 @@ public class User {
             this.password = password;
             this.username = username;
         }
+        
+        // To access the user phone number
+        public String getPhoneNumber() { return phoneNum; }
 }

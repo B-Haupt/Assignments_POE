@@ -48,7 +48,7 @@ public class MessageIT {
 
     @Test
     public void testMessageHashExact() {
-        Message msg = new Message(0, "+27718693002", "Hi there thanks", "0012345678");
+        Message msg = new Message(0, "+27718693002", "Hi there thanks","Sent","0012345678");
         assertEquals("00:0:HITHANKS", msg.createMessageHash());
     }
 
@@ -91,7 +91,7 @@ public class MessageIT {
         Message msg = new Message(2, "08575975889",
                 "Hi Keegan, did you receive the payment?");
         String result = msg.sentMessages("disregard");
-        assertEquals("Press 0 to delete message", result);
+        assertEquals("Message Disregarded.", result);
     }
 
     @Test
