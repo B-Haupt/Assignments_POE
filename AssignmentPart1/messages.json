@@ -1,4 +1,4 @@
-{"Message":"Hello there. Nice weather","Recipient":"+27 83 784 7832","MessageHash":"02:1:HELLOWEATHER","MessageId":"0253331570"}
-{"Message":"Hello again","Recipient":"+27718693002","MessageHash":"04:3:HELLOAGAIN","MessageId":"0403578441"}
-{"Message":"Hello again","Recipient":"+27718693002","MessageHash":"05:3:HELLOAGAIN","MessageId":"0506745724"}
-{"Message":"Hello again","Recipient":"+27718693002","MessageHash":"02:3:HELLOAGAIN","MessageId":"0268378320"}
+{"Message":"Hi! Nice weather","Recipient":"+27 87 378 4783","MessageHash":"06:1:HIWEATHER","Flag":null,"MessageId":"0665417752"}
+{"Message":"Hello Hello Hello Hello Hello Hello","Recipient":"+27 87 378 4783","MessageHash":"05:1:HELLOHELLO","Flag":null,"MessageId":"0513905150"}
+{"Message":"It is raining today.","Recipient":"+27 87 378 2783","MessageHash":"02:1:ITTODAY","Flag":null,"MessageId":"0288051416"}
+{"Message":"Hello 123456","Recipient":"+27 87 378 4783","MessageHash":"03:1:HELLO123456","Flag":null,"MessageId":"0322219023"}

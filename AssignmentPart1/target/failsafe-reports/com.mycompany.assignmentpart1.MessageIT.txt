@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.mycompany.assignmentpart1.MessageIT
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.939 s -- in com.mycompany.assignmentpart1.MessageIT
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.251 s -- in com.mycompany.assignmentpart1.MessageIT
